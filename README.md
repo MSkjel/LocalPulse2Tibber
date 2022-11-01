@@ -60,12 +60,12 @@ Now the directory structure should look like this
 ![image](https://user-images.githubusercontent.com/7550920/199342856-16bedba8-b268-426b-9529-9a31be1e882f.png)
 10. Move the CA.ca, Cert.crt and Priv.key files to the `tibber_cert` folder
 ![image](https://user-images.githubusercontent.com/7550920/199343069-aa4e202d-adbd-4c41-a564-e8bc1d17ce42.png)
-11. Locate the Pulse-ID which can be found in the dump
+11. Locate the Pulse-ID which can be found in the dump. Im not certain if the mqtt_url is always the same, but it is shown in the dump
 ![image](https://user-images.githubusercontent.com/7550920/199344323-614b9613-6dce-469c-ad3e-930783f23e0a.png)
-12. Paste this into the bridge.conf file
+12. Paste this into the bridge.conf file. (Make sure your mqtt_url is the same as mine, if not change `connection blabla:8883` to whatever you have in the code below) 
 ```connection bridge-to-tibber
 bridge_cafile /share/mosquitto/tibber_cert/CA.ca
-bridge_certfile /share/mosquitto/tibber_cert/Cert.key
+bridge_certfile /share/mosquitto/tibber_cert/Cert.crt
 bridge_keyfile /share/mosquitto/tibber_cert/Priv.key
 address a1zhmn1192zl1a.iot.eu-west-1.amazonaws.com:8883
 clientid tibber-pulse-[Remove this and fill in your Pulse-ID]
@@ -76,7 +76,7 @@ topic $aws/# out
 topic tibber-pulse-[Remove this and fill in your Pulse-ID]/receive in
 ``` 
 It should look like this
-![image](https://user-images.githubusercontent.com/7550920/199343997-3d7081fa-0c2a-459f-a779-eee7bbe8f039.png)
+![image](https://user-images.githubusercontent.com/7550920/199347703-a9374796-d92a-4317-a0f0-2240ca7ea236.png)
 13. Open the Mosquitto addon Configuration
 14. Set `active: true and folder: mosquitto` under Customize
 ![image](https://user-images.githubusercontent.com/7550920/199340791-758b5b1b-eae0-48cd-9631-88d64a8d0f96.png)
