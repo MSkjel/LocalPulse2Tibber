@@ -1,5 +1,6 @@
 # LocalPulse2Tibber
-A writeup of how to make a Tibber Pulse work locally while still sending data to Tibber
+A writeup of how to make a Tibber Pulse work locally while still sending data to Tibber.
+This writeup is quite messy and could probably be cleaned up alot. Sorry for that, I tried including alot of pictures for reference
 
 ## Whats needed
 - A local MQTT Broker
