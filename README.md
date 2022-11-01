@@ -13,6 +13,7 @@ This writeup is quite messy and could probably be cleaned up alot. Sorry for tha
 1. Extract SSL/TLS Certificates using either [App](#app-method) or [UART/Serial](#uartserial-method) Method
 2. Setup MQTT Broker As Bridge [HomeAssistant Supervised](#setup-mqtt-broker-as-bridge) or [Other MQTT Broker](#using-local-mqtt-broker-not-hosted-on-homeassistant-supervised)
 3. Connect Pulse to your local broker [Pulse Setup](#pulse-setup)
+4. !!!!Make sure you uninstall the custom Tibber app after doing all this, or you wont receive any updates for the Tibber app!!!!!!
 
 # Extract SSL/TLS Certificates
 ## App Method
