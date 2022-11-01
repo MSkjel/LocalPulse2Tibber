@@ -8,6 +8,11 @@ A writeup of how to make a Tibber Pulse work locally while still sending data to
 - An android phone (For app method)
 - Basic knowledge of electronics
 
+# How to
+1. Extract SSL/TLS Certificates using either [App](#app-method) or [UART/Serial](#uartserial-method) Method
+2. Setup MQTT Broker As Bridge [HomeAssistant Supervised](#setup-mqtt-broker-as-bridge) or [Other MQTT Broker](#using-local-mqtt-broker-not-hosted-on-homeassistant-supervised)
+3. Connect Pulse to your local broker [Pulse Setup](#pulse-setup)
+
 # Extract SSL/TLS Certificates
 ## App Method
 1. Uninstall the official Tibber app
@@ -82,6 +87,9 @@ It should look like this
 ![image](https://user-images.githubusercontent.com/7550920/199340791-758b5b1b-eae0-48cd-9631-88d64a8d0f96.png)
 15. Save the configuration and restart the addon.
 16. Make sure the log from the addon doesnt show any errors.
+
+# Using local MQTT Broker not hosted on HomeAssistant Supervised
+All the steps above are relevant. Just paste everything I have in the `.conf` file above into your MQTT Broker config file. And change the directories to some local directory.
 
 # Pulse Setup
 1. Reset the Pulse again, but DO NOT disconnect it in the Tibber app.
