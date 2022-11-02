@@ -18,7 +18,7 @@ This writeup is quite messy and could probably be cleaned up alot. Sorry for tha
 # Extract SSL/TLS Certificates
 ## App Method
 1. Uninstall the official Tibber app
-2. Install the custom Tibber app https://1drv.ms/u/s!AvNyZVxBVpmpmbtIly_NSDuWKhWfbw
+2. Install the custom Tibber app https://1drv.ms/u/s!AvNyZVxBVpmpmbtLAwqGEaI396Ov8Q
 3. Enable Developer Options on the phone https://developer.android.com/studio/debug/dev-options
 4. Open Developer Options and turn USB Debugging on.
 5. Install ADB(Android Debug Bridge) https://forum.xda-developers.com/t/tool-minimal-adb-and-fastboot-2-9-18.2317790/
