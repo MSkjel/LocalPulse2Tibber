@@ -20,11 +20,13 @@ This writeup is quite messy and could probably be cleaned up alot. Sorry for tha
 1. Uninstall the official Tibber app
 2. Install the custom Tibber app https://1drv.ms/u/s!AvNyZVxBVpmpmbtIly_NSDuWKhWfbw
 3. Enable Developer Options on the phone https://developer.android.com/studio/debug/dev-options
-4. Install ADB(Android Debug Bridge) https://forum.xda-developers.com/t/tool-minimal-adb-and-fastboot-2-9-18.2317790/
-5. Connect your phone to your computer using a USB cable
-6. Open Minimal ADB Fastboot
+4. Open Developer Options and turn USB Debugging on.
+5. Install ADB(Android Debug Bridge) https://forum.xda-developers.com/t/tool-minimal-adb-and-fastboot-2-9-18.2317790/
+6. Connect your phone to your computer using a USB cable
+7. Open Minimal ADB Fastboot
 ![image](https://user-images.githubusercontent.com/7550920/199311336-8740d6c0-4cf7-498a-a08f-d5683a12daef.png)
-7. Check that ADB is working correctly by doing `adb devices`.![image](https://user-images.githubusercontent.com/7550920/199311634-acd73d87-32f6-41b9-b913-df0e3960ce81.png)
+8. Check that ADB is working correctly by doing `adb devices`.
+![image](https://user-images.githubusercontent.com/7550920/199311634-acd73d87-32f6-41b9-b913-df0e3960ce81.png)
 9. Reset your Pulse by holding down the reset button for around 5 seconds
 10. Disconnect the Pulse Power-Up from the Tibber app by going into Power-Ups > Pulse > Disconnect (If you have previously had it connected)
 11. Execute `adb logcat -s "TibberPWN" -v raw`
