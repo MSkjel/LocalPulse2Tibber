@@ -25,12 +25,26 @@ This writeup is quite messy and could probably be cleaned up alot. Sorry for tha
 6. Connect to the Pulse's network, the password is shown on the back of the pulse. It looks like this `QWGH-ED12`. The - has to be included
 7. Navigate to 10.133.70.1
 8. The website should now include everything the Tibber app sent to the Pulse, including the wrong password.
-![image](https://user-images.githubusercontent.com/7550920/199963269-72ceab2c-6f76-4e9d-a188-d7f8cbeecd7d.png)
-9. Copy ca_cert, certificate and private_key and save them in three separate files on your computer(Use either right-click > select all or Ctrl+A to copy everything inside the fields!).
-10. Take a not of the mqtt_url, mqtt_topic and optionally the mqtt_sub_topic(Used by Tibber to control the Pulse, but is not needed)
-11. Change the psk to the correct password for your WiFi network.
-12. Press send and then apply afterwards.
-13. Check that the Pulse now shows on the main screen of the Tibber app(It wont have any data, just make sure the bubble is there. You might have to force-quit the app and restart it for it to show up).
+![image](https://user-images.githubusercontent.com/7550920/199970623-fa5e3ed7-c366-4714-8168-7c31bf703035.png)
+9. Copy everything inside the ca_cert field.
+![image](https://user-images.githubusercontent.com/7550920/199970668-80287761-e774-41b0-a9c1-350ed2872a10.png)
+10. Paste it into a new file called CA.ca
+![image](https://user-images.githubusercontent.com/7550920/199969243-0e209a16-7895-41c3-a18d-865e35482553.png)
+11. Copy everything inside the certificate field.
+![image](https://user-images.githubusercontent.com/7550920/199970722-5c00f144-abf9-4b37-ad53-7b10fa63cc71.png)
+12. Paste it into a new file called Cert.crt
+![image](https://user-images.githubusercontent.com/7550920/199969586-e0a193c9-5cae-4c4b-9704-3898944d0488.png)
+13. Copy everything inside the private_key field.
+![image](https://user-images.githubusercontent.com/7550920/199970770-d19fe349-5566-4029-b1b3-2a2bfdca1db4.png)
+14. Paste it into a new file called Priv.key
+![image](https://user-images.githubusercontent.com/7550920/199969839-e6bf4e18-c262-4849-922e-6a5637b3f85c.png)
+17. Copy and paste mqtt_url, mqtt_topic and mqtt_topic_sub into a file called mqtt_info or something like that
+![image](https://user-images.githubusercontent.com/7550920/199970440-b4db7e97-2c3c-4df7-8dbb-80136e84d3af.png)
+18. Change the psk to the correct password for your WiFi network.
+![image](https://user-images.githubusercontent.com/7550920/199971036-2e73e209-fa8b-4f0f-81b9-c61b323a084a.png)
+19. Press send and then apply afterwards.
+20. After a while, the Pulse should show an empty page with just some numbers and characters at the top. Like 8f5g6e6h5f. If it shows MQTTErr or WiFiErr you have to redo everything.
+21. Check that the Pulse now shows on the main screen of the Tibber app(It wont have any data, just make sure the bubble is there. You might have to force-quit the app and restart it for it to show up).
 
 ## UART/Serial Method
 //To come. Basically, the Pulse spits out everything the app sends to it when you connect it to the tibber app. It does require you to open the Pulse and connect a serial debugger to the TX/RX pins and make the pulse and the debugger share a common ground, but not power! The pulse needs to be connected to USB power while doing this The rough idea is to just listen for serial data while connecting it to the app. The output is in the same format you can see in step 12.
