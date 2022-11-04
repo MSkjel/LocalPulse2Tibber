@@ -66,7 +66,7 @@ You should now have a folder looking like this
 11. Take a not of the mqtt_url, mqtt_topic and optionally the mqtt_sub_topic(Used by Tibber to control the Pulse, but is not needed)
 12. Change the psk to the correct password for your WiFi network.
 13. Press send and then apply afterwards.
-14. Check that the Pulse now shows on the main screen of the Tibber app(It wont have any data, just make sure the bubble is there).
+14. Check that the Pulse now shows on the main screen of the Tibber app(It wont have any data, just make sure the bubble is there. You might have to force-quit the app and restart it for it to show up).
 
 
 ## UART/Serial Method
