@@ -67,8 +67,8 @@ Now the directory structure should look like this
 ![image](https://user-images.githubusercontent.com/7550920/199342856-16bedba8-b268-426b-9529-9a31be1e882f.png)
 10. Move the CA.ca, Cert.crt and Priv.key files to the `tibber_cert` folder
 ![image](https://user-images.githubusercontent.com/7550920/199343069-aa4e202d-adbd-4c41-a564-e8bc1d17ce42.png)
-11. Locate the Pulse-ID which can be found in the dump. Im not certain if the mqtt_url is always the same, but it is shown in the dump
-![image](https://user-images.githubusercontent.com/7550920/199344323-614b9613-6dce-469c-ad3e-930783f23e0a.png)
+11. Locate the Pulse-ID which can be found in the mqtt_info file we created earlier.
+![image](https://user-images.githubusercontent.com/7550920/199972051-ca42b193-9891-43f1-a3ca-01150bc6eae9.png)
 12. Paste this into the bridge.conf file. (Make sure your mqtt_url is the same as mine, if not change `connection blabla:8883` to whatever you have in the code below) 
 ```connection bridge-to-tibber
 bridge_cafile /share/mosquitto/tibber_cert/CA.ca
