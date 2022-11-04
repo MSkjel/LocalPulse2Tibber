@@ -70,7 +70,8 @@ Now the directory structure should look like this
 11. Locate the Pulse-ID which can be found in the mqtt_info file we created earlier.
 ![image](https://user-images.githubusercontent.com/7550920/199972051-ca42b193-9891-43f1-a3ca-01150bc6eae9.png)
 12. Paste this into the bridge.conf file. (Make sure your mqtt_url is the same as mine, if not change `connection blabla:8883` to whatever you have in the code below) 
-```connection bridge-to-tibber
+```
+connection bridge-to-tibber
 bridge_cafile /share/mosquitto/tibber_cert/CA.ca
 bridge_certfile /share/mosquitto/tibber_cert/Cert.crt
 bridge_keyfile /share/mosquitto/tibber_cert/Priv.key
