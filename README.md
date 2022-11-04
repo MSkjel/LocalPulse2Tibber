@@ -102,8 +102,8 @@ Without MQTT username and password
 ![Screenshot_2022-11-01-22-32-40-03_40deb401b9ffe8e1df2f1cc5ba480b12](https://user-images.githubusercontent.com/7550920/199346611-61be22b1-a051-4e17-9bd3-0b092fbb002e.jpg)
 With MQTT username and password
 ![Screenshot_2022-11-01-22-33-36-03_40deb401b9ffe8e1df2f1cc5ba480b12](https://user-images.githubusercontent.com/7550920/199346519-cf30afd7-6c6b-4dd6-bb6c-89f96b287d06.jpg)
-5. The `mqtt_topic` on the Pulse has to be what is shown in the dump from the app/serial or else it wont work.
-![image](https://user-images.githubusercontent.com/7550920/199346877-63ac2245-287b-47a9-be08-352fd2c4177c.png)
+5. The `mqtt_topic` on the Pulse has to be what is shown in mqtt_info file we created earlier
+![image](https://user-images.githubusercontent.com/7550920/199972247-7b25b2c0-524f-4450-be48-33f77d0c477d.png)
 6. Press send, and apply.
 7. Check that the pulse is connected to the MQTT Broker
 8. Set the MQTT Topic your local Pulse decoder like https://github.com/toreamun/amshan-homeassistant or https://github.com/iotux/ElWiz to the MQTT Topic you specified over and in the dump from the app/serial.
