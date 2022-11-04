@@ -10,15 +10,17 @@ This writeup is quite messy and could probably be cleaned up alot. Sorry for tha
 - Basic knowledge of electronics
 
 # How to
-1. Extract SSL/TLS Certificates using either [App](#app-method) or [UART/Serial](#uartserial-method) Method
+1. Extract SSL/TLS Certificates using either: 
+   - [ADB-App](#adb-app-method) 
+   - [UART/Serial](#uartserial-method)
 2. Setup MQTT Broker As Bridge [HomeAssistant Supervised](#setup-mqtt-broker-as-bridge) or [Other MQTT Broker](#using-local-mqtt-broker-not-hosted-on-homeassistant-supervised)
 3. Connect Pulse to your local broker [Pulse Setup](#pulse-setup)
 4. !!!!Make sure you uninstall the custom Tibber app after doing all this, or you wont receive any updates for the Tibber app!!!!!!
 
 # Extract SSL/TLS Certificates
-## App Method
+## ADB-App Method
 1. Uninstall the official Tibber app
-2. Install the custom Tibber app https://1drv.ms/u/s!AvNyZVxBVpmpmbtLAwqGEaI396Ov8Q
+2. Install the custom Tibber app https://1drv.ms/u/s!AvNyZVxBVpmpmbtMHLgeRz9LsHWG3A
 3. Enable Developer Options on the phone https://developer.android.com/studio/debug/dev-options
 4. Open Developer Options and turn USB Debugging on.
 5. Install ADB(Android Debug Bridge) https://forum.xda-developers.com/t/tool-minimal-adb-and-fastboot-2-9-18.2317790/
@@ -48,6 +50,24 @@ I'm using VSCode here. But all editors should work, as long as you can choose wh
 It's really important that the files dont have any formatting errors. They should look excactly as mine do.
 You should now have a folder looking like this
 ![image](https://user-images.githubusercontent.com/7550920/199316687-f7bc972e-109c-4ed8-ac8a-710cb4f68d83.png)
+
+## App Method
+1. Uninstall the official Tibber app
+2. Install the custom Tibber app https://1drv.ms/u/s!AvNyZVxBVpmpmbtMHLgeRz9LsHWG3A
+3. Reset your Pulse by holding down the reset button for around 5 seconds
+4. Disconnect the Pulse Power-Up from the Tibber app by going into Power-Ups > Pulse > Disconnect (If you have previously had it connected)
+5. Open the Tibber app and start setting up the Pulse. When you get to input your WiFi password, make sure to intensionally input the wrong password!
+6. After doing that your app should show the success screen, but your pulse wont show up on the main Tibber app screen.
+7. Connect to the Pulse's network, the password is shown on the back of the pulse. It looks like this `QWGH-ED12`. The - has to be included
+8. Navigate to 10.133.70.1
+9. The website should now include everything the Tibber app sent to the Pulse, including the wrong password.
+10. Copy ca_cert, certificate and private_key and save them in three separate files on your computer.
+11. Take a not of the mqtt_url, mqtt_topic and optionally the mqtt_sub_topic(Used by Tibber to control the Pulse, but is not needed)
+12. Change the psk to the correct password for your WiFi network.
+13. Press send and then apply afterwards.
+14. Check that the Pulse now shows on the main screen of the Tibber app(It wont have any data, just make sure the bubble is there).
+
+
 ## UART/Serial Method
 //To come. Basically, the Pulse spits out everything the app sends to it when you connect it to the tibber app. It does require you to open the Pulse and connect a serial debugger to the TX/RX pins and make the pulse and the debugger share a common ground, but not power! The pulse needs to be connected to USB power while doing this The rough idea is to just listen for serial data while connecting it to the app. The output is in the same format you can see in step 12.
 
