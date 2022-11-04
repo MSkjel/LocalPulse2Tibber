@@ -61,7 +61,8 @@ You should now have a folder looking like this
 7. Connect to the Pulse's network, the password is shown on the back of the pulse. It looks like this `QWGH-ED12`. The - has to be included
 8. Navigate to 10.133.70.1
 9. The website should now include everything the Tibber app sent to the Pulse, including the wrong password.
-10. Copy ca_cert, certificate and private_key and save them in three separate files on your computer.
+![image](https://user-images.githubusercontent.com/7550920/199963269-72ceab2c-6f76-4e9d-a188-d7f8cbeecd7d.png)
+10. Copy ca_cert, certificate and private_key and save them in three separate files on your computer(Use either right-click > select all or Ctrl+A to copy everything inside the fields!).
 11. Take a not of the mqtt_url, mqtt_topic and optionally the mqtt_sub_topic(Used by Tibber to control the Pulse, but is not needed)
 12. Change the psk to the correct password for your WiFi network.
 13. Press send and then apply afterwards.
