@@ -1,5 +1,6 @@
 # LocalPulse2Tibber
 A writeup of how to make a Tibber Pulse work locally while still sending data to Tibber.
+This is based on the Norwegian version of the Pulse, which is directly connected to the AMS meter using MBUS. It might also work with other versions supplied by tibber, but this is untested from my part.
 This writeup is quite messy and could probably be cleaned up alot. Sorry for that, I tried including alot of pictures for reference
 
 ## Whats needed
